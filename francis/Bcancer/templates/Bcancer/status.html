@@ -1,0 +1,84 @@
+    <!-- templates/status.html -->  
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Bcancer\assets\imgs\avatar2.jpg' %}" type="image/x-icon">
+    <title>Email Status</title>
+<style>
+    /* static/css/status.css */
+.status-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+.status-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.status-icon.success {
+    color: #28a745; 
+}
+
+.status-icon.failure {
+    color: #ff132a;  
+}
+
+h2 {
+    animation: fadeIn 1.5s ease-out;
+}
+
+p {
+    animation: fadeIn 2s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #8b025e;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.btn:hover {
+    background-color: #ac019d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+</style>
+<s/head>
+<bodyt>
+    <div class="status-container">
+        {% if status == 'success' %}
+            <div class="status-icon success">
+                <i class="fa fa-check-circle"></i> 
+            </div>
+            <h2>Message Sent Successfully!</h2>
+            <p>Thank you for reaching out. We'll get back to you soon.</p>
+        {% else %}
+            <div class="status-icon failure">
+                <i class="fa fa-times-circle"></i> 
+            </div>
+            <h2>Failed to Send Message</h2>
+            <p>Sorry, something went wrong. Please try again.</p>
+        {% endif %}
+        <a href="{% url 'index' %}" class="btn">Back to Home</a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

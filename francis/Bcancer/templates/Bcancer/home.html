@@ -1,0 +1,389 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio Website ">
+    <meta name="author" content="Glinax Tech Innovations">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'Bcancer\assets\vendors\themify-icons\css\themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'Bcancer\assets\css\meyawo.css' %}">
+    <link rel="icon" href="{% static 'Bcancer\assets\imgs\avatar2.jpg' %}" type="image/x-icon">
+    <style>
+       .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-links a {
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            font-size: 24px;
+        }
+        .qr-code {
+            display: none;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .social-links a:hover .qr-code {
+            display: block;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Francis Dugbe</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Connect</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+
+    <!-- End of Page Navbar -->
+
+   <!-- page header -->
+<header id="home" class="header">
+    <div class="overlay"></div>
+    <div class="header-content container">
+        <h1 class="header-title">
+            <span class="up">HI!</span>
+            <span class="down">I am Francis Dugbe</span>
+        </h1>
+        <p class="header-subtitle"> CEO of  <BR> DELOVA LOGISTIC AND PARABAH E-COMMERCE </p>
+
+        <button class="btn btn-primary" onclick="scrollToSection('portfolio')">Visit My Works</button>
+    </div>
+</header><!-- end of page header -->
+
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="{% static 'Bcancer/assets/imgs/francis.JPG' %}" class="about-img"
+                         alt="Image of Dennis">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am Francis Dugbe, a passionate entrepreneur with over 12 years of experience in business.
+                        My journey has been built on strong values — honesty, integrity, and transparency — guiding every decision I make.
+                        As CEO of Delova Logistics and Parabah E-Commerce, I lead a team with over 60 years of combined expertise, committed to providing high-quality products at the best prices while protecting the interests of our clients.
+                        My vision is to build Africa's leading e-commerce platform — one that redefines trust and value in online shopping.
+                    </p>
+                    <!--<a href="{% static 'Bcancer/assets/imgs/Frank Owusu CV Rectified.1 (2).pdf' %}" class="btn-rounded btn btn-outline-primary mt-4" download="Frank Owusu CV Rectified.1 (2).pdf">Download Resume</a> -->
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+<!-- service section -->
+<section class="section" id="service">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Do ?</p>
+        <h6 class="section-title mb-6">Services</h6>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/circle-book-open.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                        <h6 class="title">Sales Strategist</h6>
+                        <p class="subtitle">I specialize in persuasive communication, using copywriting and strategic sales techniques to drive engagement and boost conversions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/microphone-alt.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                        <h6 class="title">Persuasive Writing</h6>
+                        <p class="subtitle">Crafting compelling copy that motivates readers to take action, such as making a purchase or signing up.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/person-sign.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                        <h6 class="title">Behavioral Psychology </h6>
+                        <p class="subtitle">Using principles of psychology to understand consumer behavior and craft more persuasive messages. </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/apartment.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                        <h6 class="title">Market Research</h6>
+                        <p class="subtitle"> Conducting research to identify customer pain points, desires, and preferences, allowing for better-targeted sales strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/toolbox.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                        <h6 class="title"> Project Management</h6>
+                        <p class="subtitle">Leading and managing various projects to ensure they are completed on time and meet objectives.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/farm.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                            <h6 class="title">Client Relations</h6>
+                            <p class="subtitle">Building and maintaining strong relationships with clients to ensure satisfaction and repeat business.</p>
+
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="body">
+                        <img src="{% static 'Bcancer/assets/imgs/farm.svg' %}"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                            class="icon">
+                            <h6 class="title">Networking</h6>
+                            <p class="subtitle"> Leveraging industry events, like the PENSA Dinner Awards, to build connections and grow the business.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- end of row -->
+    </div>
+</section><!-- end of service section -->
+
+
+ <!-- portfolio section -->
+ <section class="section" id="portfolio">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Did ?</p>
+        <h6 class="section-title mb-6">Portfolio</h6>
+        <!-- row -->
+        <div class="row">
+            
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img src="{% static 'Bcancer/assets/imgs/image_!.png' %}" class="portfolio-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Crafted High-Converting Copy</h5>
+                                <p class="font-weight-normal">I wrote persuasive content for websites, 
+                                    landing pages, emails, and ads that guided readers toward specific actions, 
+                                    leading to higher engagement and conversion rates.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="{% static 'Bcancer/assets/imgs/image_2.jpg' %}" class="img-responsive rounded"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>Collaborated with Designers and Developers</h5>
+                                <p class="font-weight-normal">I worked closely with creative and tech teams to ensure that visual elements supported the copy, creating a seamless and impactful user experience.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="portfolio-card">
+                    <img class="portfolio-card-img" src="{% static 'Bcancer/assets/imgs/image_3.jpeg' %}" class="img-responsive rounded"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4> Trained and Guided Junior Writers</h5>
+                                <p class="font-weight-normal">I provided mentorship and feedback to junior copywriters, helping them refine their skills and align their work with broader sales strategies.</p>
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div><!-- end of row -->
+    </div><!-- end of container -->
+</section> 
+
+
+
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me? </h6>
+                    <p class="m-0 text-light">Always feel Free to contact me on 
+                        <br>0548014321/0504725443
+                        <br> francisdugbe967@gmail.com
+                    </p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="#contact"><button class="btn btn-lg my-font btn-light rounded">Let's Connect</button></a>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+   <section class="section" id="testmonial">
+    <div class="container text-center">
+        <p class="section-subtitle">What People Think About Me ?</p>
+        <h6 class="section-title mb-6">Testmonial</h6>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% static 'Bcancer/assets/imgs/avatar2.jpg' %}" class="testimonial-card-img"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">
+                            “Working with Francis Dugbe transformed the way we connect with our audience. Their copy didn’t just sound good—it converted. Our email open rates jumped, and our landing pages finally started performing” </p>
+                        <h6 class="testimonial-card-title">Sandra K., Digital Marketing Lead</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="{% static 'Bcancer/assets/imgs/avatar3.jpg' %}" class="testimonial-card-img"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">“Our conversions doubled after Francis restructured our email campaigns. They know how to speak to your audience in a way that feels authentic and drives action.”
+                        </p>
+                        <h6 class="testimonial-card-title"> Kwame B., CEO of Elevate Gear</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end of container -->
+</section> <!-- end of testimonial section -->
+    
+
+  <!-- contact section -->
+  <section class="section" id="contact">
+    <div class="container text-center">
+        <p class="section-subtitle">How can you communicate?</p>
+        <h6 class="section-title mb-5">Let's connect</h6>
+        <!-- contact form -->
+        <form method="POST" action="{% url 'send_to_org' %}" class="contact-form col-md-10 col-lg-8 m-auto">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group col-sm-12">
+                    <textarea name="comment" rows="6" class="form-control" placeholder="Write Something"></textarea>
+                </div>
+                <div class="form-group col-sm-12 mt-3">
+                    <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; Francis Dugbe
+            </p>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="###" class="link"><i class="fab fa-linkedin"></i>
+                    <img src="{% static 'Bcancer/assets/imgs/2.png' %}" alt="LinkedIn QR" class="qr-code">
+                </a>
+                <a href="###" class="link"><i class="fab fa-instagram"></i>
+                    <img src="{% static 'Bcancer/assets/imgs/4.png' %}" alt="Instagram QR" class="qr-code">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100013277046735&mibextid=wwXIfr&mibextid=wwXIfr" class="link"><i class="fab fa-facebook"></i>
+                    <img src="{% static 'Bcancer/assets/imgs/1.png' %}" alt="Facebook QR" class="qr-code">
+                </a>
+                <a href="###" class="link"><i class="fab fa-twitter"></i>
+                    <img src="{% static 'Bcancer/assets/imgs/3.png' %}" alt="Twitter QR" class="qr-code">
+                </a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+    <script src="{% static 'Bcancer\assets\vendors\jquery\jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'Bcancer\assets\vendors\bootstrap\bootstrap.bundle.js' %}"></script>
+
+    <script src="{% static 'Bcancer\assets\vendors\bootstrap\bootstrap.affix.js' %}"></script>
+
+    <script src="{% static 'Bcancer\assets\js\meyawo.js' %}"></script>
+
+<script>
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      card.addEventListener('click', function() {
+        this.classList.toggle('active');
+      });
+    });
+  </script>
+  </body>
+  
+</body>
+
+</html>
